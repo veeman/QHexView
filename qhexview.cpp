@@ -616,7 +616,7 @@ void QHexView::drawDocument(QTextCursor& c) const
         if(m_options.hasFlag(QHexFlags::StyledAddress))
             acf.setBackground(this->palette().color(QPalette::Window));
 
-        if(m_hexdelegate) m_hexdelegate->renderAddress(address, acf, this);
+        if(m_hexdelegate) m_hexdelegate->renderAddress(addrstr, address, acf, this);
 
         if(m_hexcursor->line() == static_cast<qint64>(line) && m_options.hasFlag(QHexFlags::HighlightAddress))
         {

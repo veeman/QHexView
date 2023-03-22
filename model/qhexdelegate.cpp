@@ -21,8 +21,9 @@ QString QHexDelegate::asciiHeader(const QHexView* hexview) const
     return QString();
 }
 
-void QHexDelegate::renderAddress(quint64 address, QTextCharFormat& cf, const QHexView* hexview) const
+void QHexDelegate::renderAddress(QString& as, quint64 address, QTextCharFormat& cf, const QHexView* hexview) const
 {
+    Q_UNUSED(as);
     Q_UNUSED(address);
     Q_UNUSED(hexview);
     Q_UNUSED(cf);
